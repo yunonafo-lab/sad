@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>QOLMENU</RootNamespace>
+    <AssemblyName>QOLMENU</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+	  <DebugSymbols>true</DebugSymbols>
+	  <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup>
+	  <GameDir>C:\Program Files (x86)\Steam\steamapps\common\KoboldKare</GameDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="KoboldESP_Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KoboldESP_Background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\KoboldKare\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.UnityInput">
+
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\KoboldKare\BepInEx\plugins\BepInEx.UnityInput.dll</HintPath>
+
+    </Reference>
+	  <Reference Include="UnityEngine">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.PhysicsModule">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.IMGUIModule">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.TextRenderingModule">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(GameDir)\KoboldKare_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+	  <Reference Include="PhotonUnityNetworking">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="PhotonRealtime">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\PhotonRealtime.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+	  <Reference Include="Photon3Unity3D">
+		  <HintPath>$(GameDir)\KoboldKare_Data\Managed\Photon3Unity3D.dll</HintPath>
+		  <Private>false</Private>
+	  </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(GameDir)\KoboldKare_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
